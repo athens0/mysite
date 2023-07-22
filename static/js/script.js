@@ -1,10 +1,7 @@
-// var tracker = document.getElementById("tracker")
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-
-// function onMouseMove(event) {
-//     tracker.style.top = `${event.pageY - 10}px`;
-//     tracker.style.left = `${event.pageX - 10}px`;
-// }
-
-
-// document.onmousemove = onMouseMove;
+window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
