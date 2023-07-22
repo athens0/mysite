@@ -1,0 +1,178 @@
+:root {
+    --main-color: rgb(245, 250, 255);
+    --main-color-hl: rgb(117, 241, 255);
+    --link-color: rgb(126, 58, 195);
+}
+
+@font-face {
+    font-family: 'SAOUI';
+    src: url("../../sources/fonts/SAOUI-Regular.otf");
+}
+
+body, html {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 1)), url("../../sources/img/bg.jpg") center center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    font-family: 'SAOUI';
+    color: var(--main-color);
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mouse-tracker {
+    position: absolute;
+    border-radius: 20px;
+    height: 20px;
+    width: 20px;
+    z-index: -1;
+
+    background: radial-gradient(var(--main-color-hl), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0));
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px 3vh;
+    padding-top: 6vh;
+}
+
+.my-links {
+    margin-left: 1vh;
+}
+
+.my-links a {
+    margin-left: 1vh;
+}
+
+.my-links img {
+    border-radius: 50px;
+}
+
+.container {
+    font-size: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 110px;
+}
+
+.nickname {
+    font-size: 2.5em;
+    display: flex;
+    align-items: stretch;
+}
+
+.hover{
+    transition: .2s;
+    will-change: color, font-size, filter;
+}
+
+.hover:hover {
+    color: var(--main-color-hl);
+    font-size: 105%;
+    filter: drop-shadow(0 0 1rem var(--main-color-hl));
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    padding: 0px 3vh;
+    padding-bottom: 6vh;
+}
+
+.footer-el {
+    width: 100%;
+    padding: 0px 5px;
+}
+
+.text-link {
+    color: var(--link-color);
+    transition: 0.2s;
+    will-change: color;
+    text-decoration: none;
+}
+
+.text-link:hover {
+    color: var(--main-color-hl);
+}
+
+.contacts-list {
+    display: inline-block;
+}
+
+.btn-default {
+    border: none;
+    background: none;
+    
+    will-change: opacity, filter;
+
+    font-family: 'SAOUI';
+}
+
+.btn-default img {
+    opacity: 0.7;
+    transition: 0.2s;
+    will-change: opacity;
+}
+
+.tip {
+    position: absolute;
+    bottom: 100%;
+    right: 0%;
+    margin-bottom: 8px;
+    padding: 5px;
+    width: max-content;
+
+    color: black;
+    font-size: 1.3em;
+    background-color: var(--main-color);
+    border-radius: 4px;
+
+    transition: 0.2s;
+    will-change: opacity;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.btn-default:hover > .tip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.btn-default:hover > img {
+    opacity: 0.95;
+    filter: drop-shadow(0 0 0.6rem var(--main-color-hl));
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.margin-auto {
+    margin: 0 auto;
+    width: fit-content;
+}
